@@ -4,49 +4,70 @@
 <head>
     <meta charset="utf-8">
     <link href="CSS/styles.css" rel="stylesheet">
+    <link rel="icon" type="images.ico" href="images/Group 35.ico">
     <title>Твой стартап</title>
+    <script src="JavaScript/script.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="../project1/main.html"><img src="images/logo.svg" alt="Логотип компании" class="logo__img"></a>
-        </div>
-        <div class="nav">
-            <ul class="nav__items">
-                <li class="nav__item"><a href="#" class="nav__link">Портфолио</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">О компании</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Услуги<span class="nav__arrow"><img src="images/arrow.svg"></span></a>
-                    <div class="nav__subnav-wrapper">
-                        <div class="nav__subnav">
-                            <a href="#" class="nav__subnav-link">Создание сайтов</a>
-                            <a href="#" class="nav__subnav-link">Онлайн продвижение</a>
-                            <a href="#" class="nav__subnav-link">Прототипизирование и дизайн</a>
-                            <a href="#" class="nav__subnav-link">Разработка брендбука</a>
-                        </div>
+    <section class="container" style="padding: 0;">
+            <header>
+                <div class="logo">
+                    <a href="../project1/main.html"><img src="images/logo.svg" alt="Логотип компании" class="logo__img"></a>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Услуги <span class="nav__arrow"><img src="images/arrow.svg"></span></a>  
+                        
+                            <div class="nav__subnav-wrapper">
+                                <div class="nav__subnav">
+                                    <a href="#" class="nav__subnav-link">Создание сайтов</a>
+                                    <a href="#" class="nav__subnav-link">Онлайн продвижение</a>
+                                    <a href="#" class="nav__subnav-link">Прототипизирование и дизайн</a>
+                                    <a href="#" class="nav__subnav-link">Разработка брендбука</a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <div class="right-nav">
+                    <p class="right-nav__phone-number"><span class="nav__phone-number-color-text">8 (800) </span>350 93 98</p>
+                    <button type="button" class="button right-nav__button">Обсудить проект</button>
+                </div>
+
+                <div class="burger-menu" onclick="burgerCall()">
+                    <span></span>
+                </div>
+            
+            
+            </header>
+    </section>
+
+    <!-- <div class="space"> -->
+    <section class="container">
+        
+            <div class="support">
+                <div class="support__block">
+                    <p class="support__title-text">Поддержка</br>сайтов</p>
+                    <p class="support__main-text">Решаем все технические вопросы, чтобы вы</br>могли сосредоточиться <span class="support__main-color-text">на своем бизнесе.</span></p>
+                    <div class="support__button-wrapper">
+                        <button type="button" class="button support__button">Обсудить проект</button>
                     </div>
-                </li>
-                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-            </ul>
-        </div>
-        <div class="right-nav">
-            <p class="right-nav__phone-number"><span class="nav__phone-number-color-text">8 (800) </span>350 93 98</p>
-            <button type="button" class="button right-nav__button">обсудить проект</button>
-        </div>
-    </header>
-    <div class="space">
-        <div class="support">
-            <div class="support__block">
-                <p class="support__title-text">Поддержка</br>сайтов</p>
-                <p class="support__main-text">Решаем все технические вопросы, чтобы вы</br>могли сосредоточиться <span class="support__main-color-text">на своем бизнесе.</span></p>
-                <div class="support__button-wrapper">
-                    <button type="button" class="button support__button">обсудить проект</button>
+                </div>
+                <div class="support__pic">
+                    <img src="images/pc.svg" class="support__img">
                 </div>
             </div>
-            <div class="support__pic">
-                <img src="images/pc.svg" class="support__img">
-            </div>
-        </div>
+
+    </section>
+
+    <section class="container">
         <div class="info">
             <div class="info__block">
                 <div class="info__pic">
@@ -58,7 +79,7 @@
                         и бюджет являются важными факторами при выборе веб-студии, благодаря нашим конкурентоспособным ценам Вам не придется выходить за рамки бюджета, чтобы получить высококачественный сервис.</p>
                 </div>
             </div>
-            <hr class="info__side">
+            <!-- <hr class="info__side"> -->
             <div class="info__block">
                 <div class="info__pic">
                     <img src="images/Users.svg" class="info__img">
@@ -70,7 +91,7 @@
                         но и эффективным для вашего бизнеса.</p>
                 </div>
             </div>
-            <hr class="info__side">
+            <!-- <hr class="info__side"> -->
             <div class="info__block">
                 <div class="info__pic">
                     <img src="images/Handshake.svg" class="info__img">
@@ -84,70 +105,105 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="container">
         <div class="title-text">Технологии</div>
         <div class="tech">
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/CSS-c.svg" alt="CSS" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">CSS</div>
                     <div class="tech__desc-text">Язык программирования</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/JS-c.svg" alt="JavaScript" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">JavaScript</div>
                     <div class="tech__desc-text">Язык программирования</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/php-c.svg" alt="PHP" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">PHP</div>
                     <div class="tech__desc-text">Язык программирования</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/WP-c.svg" alt="WordPress" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">WordPress</div>
                     <div class="tech__desc-text">CMS</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/Vue-c.svg" alt="Vue.JS" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">Vue.JS</div>
                     <div class="tech__desc-text">Фреймворк/библиотека</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/JQ-c.svg" alt="JQuery" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">JQuery</div>
                     <div class="tech__desc-text">Фреймворк/библиотека</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/NJS-c.svg" alt="Node.JS" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">Node.JS</div>
                     <div class="tech__desc-text">Среда разработки</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/VSC-c.svg" alt="Visual Studio Code" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">Visual Studio Code</div>
-                    <div class="tech__desc-text">Среда разработк</div>
+                    <div class="tech__desc-text">Среда разработки</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/MySQL-c.svg" alt="MySQL" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">MySQL</div>
                     <div class="tech__desc-text">База данных</div>
                 </div>
+            </div>
+
+            <div class="tech__block">
                 <div class="tech__pic"><img src="images/phps-c.svg" alt="PhpStorm" class="tech__img"></div>
                 <div class="tech__info">
                     <div class="tech__name-text">PhpStorm</div>
                     <div class="tech__desc-text">Среда разработки</div>
                 </div>
+            </div>
         </div>
+    </section>
+
+    <section class="container">
         <div class="title-text">Возможности</div>
         <div class="ability">
             <div class="ability__block">
-                <div class="ability__top-side-block">
-                    <div class="ability__number">01</div>
-                    <hr class="ability__line">
-                </div>
-                <div class="ability__text-block">
-                    <div class="ability__title-text">Поддержка и развитие</div>
-                    <div class="ability__info-text">Мы предлагаем полную поддержку вашего сайта после его запуска. Это включает в себя регулярное обновление программного обеспечения, устранение возникающихоблем, резервное копирование данных и мониторинг работы сайта. Мы также готовы внести необходимые изменения и доработки для улучшения функциональности и производительности вашего сайта.</div>
-                </div>
+                    <div class="ability__top-side-block">
+                        <div class="ability__number">01</div>
+                        <hr class="ability__line">
+                    </div>
+                    <div class="ability__text-block">
+                        <div class="ability__title-text">Поддержка и развитие</div>
+                        <div class="ability__info-text">Мы предлагаем полную поддержку вашего сайта после его запуска. Это включает в себя регулярное обновление программного обеспечения, устранение возникающихоблем, резервное копирование данных и мониторинг работы сайта. Мы также готовы внести необходимые изменения и доработки для улучшения функциональности и производительности вашего сайта.</div>
+                    </div>
             </div>
             <div class="ability__block">
                 <div class="ability__top-side-block">
@@ -158,13 +214,13 @@
                     <div class="ability__title-text">Проектирование сайта</div>
                     <div class="ability__info-text">Даже самая недостижимая и глобальная цель может быть успешно реализована, если её грамотно распланировать: разбить на более понятные и последовательные задачи. 
                         Так же и с созданием сайта: чёткое понимание всего процесса и грамотное планирование поможет вам максимально эффективно распределить ресурсы и получить на выходе наилучший результат из возможных.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="ability__block">
-                <div class="ability__top-side-block">
-                    <div class="ability__number">03</div>
-                    <hr class="ability__line">
-                </div>
+                <div class="ability__block">
+                    <div class="ability__top-side-block">
+                        <div class="ability__number">03</div>
+                        <hr class="ability__line">
+                    </div>
                 <div class="ability__text-block">
                     <div class="ability__title-text">Дизайн сайта</div>
                     <div class="ability__info-text">Разрабатываем дизайны сайтов, которые сочетают в себе современные тенденции и лучшие практики пользовательского опыта. Мы уделяем особое внимание навигации, компоновке контента, использованию цветовой схемы и типографики. Наша цель - создать дизайн, который будет привлекать внимание посетителей и обеспечивать удобство использования сайта.</div>
@@ -231,20 +287,23 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="container">
         <div class="subs-top-block">
             <div class="title subs-top-block__title-text">Пакеты подписок</div>
             <div class="subs-top-block__left-side-text">Наша команда готова взять на себя все технические и операционные задачи, связанные 
                 с вашим сайтом, чтобы вы могли сосредоточиться на развитии своего бизнеса.</div>
-        </div>
-        <div class="subs">
-            <div class="subs__version">
-                <div class="subs__margin">
-                    <div class="subs__name-text">Лайт</div>
-                    <div class="subs__time-text">10 часов в месяц</div>
-                    <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Поддержка и развитие сайта</div>
-                    <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Проектирование сайта</div>
-                    <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Дизайн сайта</div>
-                    <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Программирование сайта</div>
+            </div>
+            <div class="subs">
+                <div class="subs__version">
+                    <div class="subs__margin">
+                        <div class="subs__name-text">Лайт</div>
+                        <div class="subs__time-text">10 часов в месяц</div>
+                        <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Поддержка и развитие сайта</div>
+                        <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Проектирование сайта</div>
+                        <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Дизайн сайта</div>
+                        <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Программирование сайта</div>
                     <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">HTML - верстка сайта</div>
                     <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Тестирование сайта</div>
                     <div class="subs__minus">
@@ -303,6 +362,9 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="container">
         <div class="title-text">Текущие проекты по поддержке сайтов</div>
         <div class="project">
             <div class="project__block">
@@ -328,20 +390,23 @@
             </div>
             <div class="project__space-button"><button type="button" class="project__button">показать еще</button></div>
         </div>
-    </div>
-    <div class="big-button">
-        <button type="button" class="big-button__button">
-            <div class="big-button__text">
-                <div class="big-button__txt">Оставьте заявку на поддержку сайта</div>
-                <div class="big-button__arrow"><img src="images/Arrow 9.svg" class="big-button__img"></div>
-            </div>
-        </button>
-    </div>
-    <script src="JavaScript/script.js"></script>
+    </section>
+    <!-- </div> -->
+
+    <!-- <section class="container bb">  -->
+        <div class="big-button">
+            <button type="button" class="big-button__button">
+                <div class="big-button__text">
+                    <div class="big-button__txt">Оставьте заявку на поддержку сайта</div>
+                    <div class="big-button__arrow"><img src="images/Arrow 9.svg" class="big-button__img"></div>
+                </div>
+            </button>
+        </div>
+    <!-- </section> -->
 </body>
 
 <footer>
-    <div class="space">
+    <section class="container">
         <div class="footer-main">
             <div class="footer-main__logo"><img src="images/logo 2.svg" class="footermain__img"></div>
             <div class="footer-main__block">
@@ -380,6 +445,7 @@
                 </ul>
             </div>
         </div>
+
         <hr class="line header-line">
         <div class="footer-bottom">
             <div class="footer-bottom__left-side">
@@ -393,7 +459,7 @@
                 <div class="footer-bottom__pic"><a href="#"><img src="images/inst.svg" class="footer-bottom__img"></a></div>
             </div>
         </div>
-    </div>
+    </section>
 </footer>
 
 </html>

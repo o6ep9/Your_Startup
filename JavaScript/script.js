@@ -5,4 +5,10 @@ window.addEventListener('scroll', function() {
     } else {
       header.style.backgroundColor = 'transparent';
     }
-  });
+});
+
+function burgerCall(){
+  alert("Бургер кол");
+  this.classList.toggle('active');
+  document.querySelector('.nav').classList.toggle('open');
+};
