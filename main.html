@@ -12,6 +12,7 @@
 <body>
     <section class="container" style="padding: 0;">
             <header>
+
                 <div class="logo">
                     <a href="../project1/main.html"><img src="images/logo.svg" alt="Логотип компании" class="logo__img"></a>
                 </div>
@@ -21,50 +22,129 @@
                         <li><a href="#">Портфолио</a></li>
                         <li><a href="#">О компании</a></li>
                         <li><a href="#">Услуги <span class="nav__arrow"><img src="images/arrow.svg"></span></a>  
-                        
                             <div class="nav__subnav-wrapper">
-                                <div class="nav__subnav">
-                                    <a href="#" class="nav__subnav-link">Создание сайтов</a>
-                                    <a href="#" class="nav__subnav-link">Онлайн продвижение</a>
-                                    <a href="#" class="nav__subnav-link">Прототипизирование и дизайн</a>
-                                    <a href="#" class="nav__subnav-link">Разработка брендбука</a>
-                                </div>
+                                <ul class="nav__subnav">
+                                    <li><a href="#" class="nav__subnav-link">Создание сайтов</a></li>
+                                    <li><a href="#" class="nav__subnav-link">Онлайн продвижение</a></li>
+                                    <li><a href="#" class="nav__subnav-link">Прототипизирование и дизайн</a></li>
+                                    <li><a href="#" class="nav__subnav-link">Разработка брендбука</a></li>
+                                </ul>
                             </div>
                         </li>
-                        
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
 
                 <div class="right-nav">
-                    <p class="right-nav__phone-number"><span class="nav__phone-number-color-text">8 (800) </span>350 93 98</p>
-                    <button type="button" class="button right-nav__button">Обсудить проект</button>
+                    <p href="tel:#" class="right-nav__phone-number"><span class="nav__phone-number-color-text">8 (800)</span>350 93 98</p>
+                    <button type="button" class="button right-nav__button" onclick="openPopUp()">Обсудить проект</button>
                 </div>
 
                 <div class="burger-menu" onclick="burgerCall()">
                     <span></span>
                 </div>
-            
-            
+                
             </header>
     </section>
 
-    <!-- <div class="space"> -->
     <section class="container">
-        
+        <div class="application">
+            <div class="application__text">
+                <h1 class="application__title">Оставьте заявку на поддержку сайта</h1>
+                <div class="application__information">Наши менеджеры свяжутся с Вами в течении 10 минут, после отправки заявки. В телефонном разговоре зададут уточняющие вопросы для формирования коммерческого предложения, которое Вы получите в день обращения.</div>
+            </div>
+
+            <div class="application__input-block">
+                <div class="application__static-input">
+                    <div class="application__input">
+                        <input type="text" id="application__name-input" class="application__input-entry" placeholder="Имя">
+                        <span id="application__error-name" class="application__error-name"></span>
+                    </div>
+                    <div class="application__input">
+                        <p><input type="tel" id="application__phone-number-input" class="application__input-entry" placeholder="Телефон"></p>
+                        <span id="application__error-phone" class="application__error-phone"></span>
+                    </div>
+                    <div class="application__input">
+                        <input type="text" name="application__company-input" class="application__input-entry" placeholder="Компания">
+                    </div>
+                    <div class="application__input">
+                        <input type="email" id="application__email-input" class="application__input-entry" placeholder="Почта">
+                        <span id="application__error-email" class="application__error-bottom"></span>
+                    </div>
+                </div>
+                <div class="application__rate-block">
+                    <div class="application__select-rate">
+                        <p id="application__select-rate-text" class="application__select-rate-text">Тариф</p>
+                        <div class="application__select-arrow">
+                            <span class="application__select-arrow-left"></span>
+                            <span class="application__select-arrow-right"></span>
+                        </div>
+                    </div>
+                    <div class="application__error-call-wrapper">
+                        <span id="application__error-rate" class="application__error-call"></span>
+                    </div>
+                    <div class="application__submenu-rate-wrapper" style="visibility: hidden; opacity: 0;">
+                        <div class="application__submenu-rate">
+                            <div id="application__submenu-option1" class="application__submenu-option application__submenu-option1" onclick = "changeRate('application__submenu-option1')">лайт</div>
+                            <div id="application__submenu-option2" class="application__submenu-option application__submenu-option2" onclick = "changeRate('application__submenu-option2')">мидл</div>
+                            <div id="application__submenu-option3" class="application__submenu-option application__submenu-option3" onclick = "changeRate('application__submenu-option3')">хард</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="application__call">
+                    <div class="application__input-call">
+                        <textarea type="text" name="application__call-input" class="application__call-input application__input-entry" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="application__call-bottom">
+                        <p class="application__explanation">Опишите задачу, что необходимо<br/>будет делать.</p>
+                        <div class="application__call-button">
+                            <button type="file" class="application__button-upload-file">прикрепить файл</button>
+                            <input type="file" class="application__upload-file">
+                        </div>
+                    </div>
+                </div>
+                <div class="application__bottom">
+                    <div class="application--bottom__button">
+                        <button type="button" class="application__bottom-send" onclick="openThxPopUp()">отправить</button>
+                    </div>
+                    <span class="application__bottom-text">Нажимая на кнопку, вы соглашаетесь с <a href="#" class="application__bottom-link">Политикой персональных данных</a></span>
+                </div>
+            </div>
+
+            <div class="application__cross">
+                <img src="images/cross.svg" class="application__cross-img" onclick="closePopUp()">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="application-end">
+            <h1 class="application-end__title">Спасибо</br>за обращение !</h1>
+            <div class="application-end__left">
+                <p class="application-end__left-text">Мы получили вашу заявку.</br>В ближайшее время наш аккаунт-менеджер свяжется</br>с вами. Удачного дня!</p>
+                <button class="application-end__left-button" onclick = applicationEnd()>отправить повторно</button>
+            </div>
+            <div class="application-end__cross">
+                <img src="images/Group 1205.svg" class="application-end__cross-img">
+            </div>
+        </div>
+    </section>
+
+    <main>
+    <section class="container">
             <div class="support">
                 <div class="support__block">
                     <p class="support__title-text">Поддержка</br>сайтов</p>
                     <p class="support__main-text">Решаем все технические вопросы, чтобы вы</br>могли сосредоточиться <span class="support__main-color-text">на своем бизнесе.</span></p>
                     <div class="support__button-wrapper">
-                        <button type="button" class="button support__button">Обсудить проект</button>
+                        <button type="button" class="button support__button" onclick="openPopUp()">Обсудить проект</button>
                     </div>
                 </div>
                 <div class="support__pic">
                     <img src="images/pc.svg" class="support__img">
                 </div>
             </div>
-
     </section>
 
     <section class="container">
@@ -196,14 +276,18 @@
         <div class="title-text">Возможности</div>
         <div class="ability">
             <div class="ability__block">
-                    <div class="ability__top-side-block">
-                        <div class="ability__number">01</div>
-                        <hr class="ability__line">
-                    </div>
-                    <div class="ability__text-block">
-                        <div class="ability__title-text">Поддержка и развитие</div>
+                <div class="ability__top-side-block">
+                    <div class="ability__number">01</div>
+                    <hr class="ability__line">
+                </div>
+                <div class="ability__text-block">
+                    <div class="ability__title-text">Поддержка и развитие</div>
+                    <div class="possibilites__block-box possibilites__block-box1" onclick="openInformation(1)">
                         <div class="ability__info-text">Мы предлагаем полную поддержку вашего сайта после его запуска. Это включает в себя регулярное обновление программного обеспечения, устранение возникающихоблем, резервное копирование данных и мониторинг работы сайта. Мы также готовы внести необходимые изменения и доработки для улучшения функциональности и производительности вашего сайта.</div>
+                        <div class="possibilites__bottom-shadow possibilites__bottom-shadow1"></div>
+                        <img src="images/Arrow 6.svg" alt="" class="possibilites__img-arrow possibilites__img-arrow1">
                     </div>
+                </div>
             </div>
             <div class="ability__block">
                 <div class="ability__top-side-block">
@@ -214,8 +298,8 @@
                     <div class="ability__title-text">Проектирование сайта</div>
                     <div class="ability__info-text">Даже самая недостижимая и глобальная цель может быть успешно реализована, если её грамотно распланировать: разбить на более понятные и последовательные задачи. 
                         Так же и с созданием сайта: чёткое понимание всего процесса и грамотное планирование поможет вам максимально эффективно распределить ресурсы и получить на выходе наилучший результат из возможных.</div>
-                    </div>
                 </div>
+            </div>
                 <div class="ability__block">
                     <div class="ability__top-side-block">
                         <div class="ability__number">03</div>
@@ -304,8 +388,8 @@
                         <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Проектирование сайта</div>
                         <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Дизайн сайта</div>
                         <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Программирование сайта</div>
-                    <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">HTML - верстка сайта</div>
-                    <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Тестирование сайта</div>
+                        <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">HTML - верстка сайта</div>
+                        <div class="subs__item-text"><img src="images/tick-circle.svg" class="subs__tick-img">Тестирование сайта</div>
                     <div class="subs__minus">
                         <div class="subs__item-text"><img src="images/minus-cirlce.svg" class="subs__tick-img">Настройка рекламы</div>
                         <div class="subs__item-text"><img src="images/minus-cirlce.svg" class="subs__tick-img">Фирменный стиль</div>
@@ -391,18 +475,17 @@
             <div class="project__space-button"><button type="button" class="project__button">показать еще</button></div>
         </div>
     </section>
-    <!-- </div> -->
 
-    <!-- <section class="container bb">  -->
         <div class="big-button">
-            <button type="button" class="big-button__button">
+            <button type="button" class="big-button__button" onclick="openPopUp()">
                 <div class="big-button__text">
                     <div class="big-button__txt">Оставьте заявку на поддержку сайта</div>
                     <div class="big-button__arrow"><img src="images/Arrow 9.svg" class="big-button__img"></div>
                 </div>
             </button>
         </div>
-    <!-- </section> -->
+    </main>
+
 </body>
 
 <footer>
